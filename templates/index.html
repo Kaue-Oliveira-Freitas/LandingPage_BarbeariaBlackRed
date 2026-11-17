@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/media/icons/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/Styles/styles.css">
+    <title>Barbearia Black & Red</title>
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="navbar-menu">
+            <li><a href="#section0">Início</a></li>
+            <li><a href="#section1">Sobre nós</a></li>
+            <li><a href="#section3">Serviços</a></li>
+            <li><a href="#section4">Contato</a></li>
+        </ul>
+    </nav>
+
+    <section id="section0" class="banner"></section>
+
+    <section id="section1" class="sobre">
+        <div class="sobre-text">
+            <h2>SOBRE NÓS</h2>
+            <p>A Barbearia Black Red nasceu da paixão pelo estilo, cuidado e tradição das barbearias. Nosso objetivo é oferecer muito mais do que um simples corte, proporcionando uma experiência agradável em um ambiente moderno e confortável.
+            Buscamos sempre atender cada cliente de forma personalizada, entendendo seu estilo e cuidando de cada detalhe para garantir o melhor resultado. Na Black Red, qualidade, atenção e satisfação fazem parte do nosso trabalho todos os dias.</p>
+        </div>
+        <div class="sobre-image">
+            <img src="/media/Barbearia_ambiente.jpg" alt="Ambiente da Barbearia Black & Red" width="300px">
+        </div>
+    </section>
+
+    <section id="section2" class="cards-customers">
+        <h2>Veja alguns dos nossos trabalhos</h2>
+        <div class="card">
+            <div class="card-image">
+                <img  src="/media/corte1.jpg" alt="Exemplo de corte 01">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-image">
+                <img  src="/media/corte2.jpg" alt="Exemplo de corte 02">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-image">
+                <img  src="/media/corte4.jpg" alt="Exemplo de corte 03">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-image">
+                <img  src="/media/corte5.jpg" alt="Exemplo de corte 04">
+            </div>
+        </div>
+    </section>
+
+    <section id="section3" class="servicos">
+        <span>Nossos principais serviços</span>
+
+        <!-- Botões de seta específicos para os serviços -->
+        <button class="btn-servico btn-servico-prev" onclick="moverServicos(-1)">&#10094;</button>
+        <button class="btn-servico btn-servico-next" onclick="moverServicos(1)">&#10095;</button>
+
+        <div class="servicos-container">
+            <div class="servicos-wrapper" id="servicosWrapper">
+                
+                <!-- Serviço 1 -->
+                <div class="card-servico">
+                    <div class="servico-imagem">
+                        <img src="/media/servicos/corte_masculino.jpg" alt="Corte de Cabelo">
+                    </div>
+                    <h5>Corte moderno e personalizado de acordo com o estilo do cliente.</h5>
+                    <h3>Corte Masculino</h3>
+                    <p>R$ 35,00</p>
+                </div>
+
+                <!-- Serviço 2 -->
+                <div class="card-servico">
+                    <div class="servico-imagem">
+                        <img src="/media/servicos/barba.jpg" alt="Barba">
+                    </div>
+                    <h5>Aparagem e acabamento para deixar a barba bem alinhada.</h5>
+                    <h3>Barba Completa</h3>
+                    <p>R$ 25,00</p>
+                </div>
+
+                <!-- Serviço 3 -->
+                <div class="card-servico">
+                    <div class="servico-imagem">
+                        <img src="/media/servicos/cabelo_barba.jpg" alt="Cabelo e Barba">
+                    </div>
+                    <h5>Combo completo para renovar o visual.</h5>
+                    <h3>Combo Black Red(Cabelo e Barba)</h3>
+                    <p>R$ 50,00</p>
+                </div>
+
+                <!-- Serviço 4 -->
+                <div class="card-servico">
+                    <div class="servico-imagem">
+                        <img src="/media/servicos/kid.jpg" alt="Penteado">
+                    </div>
+                    <h5>Corte feito com cuidado e conforto para crianças.</h5>
+                    <h3>Corte Infantil</h3>
+                    <p>R$ 30,00</p>
+                </div>
+
+                <!-- Serviço 5 -->
+                <div class="card-servico">
+                    <div class="servico-imagem">
+                        <img src="/media/servicos/Sobrancelha.jpg" alt="Sobrancelha">
+                    </div>
+                    <h5>Design e alinhamento para um visual mais marcante.</h5>
+                    <h3>Sobrancelha</h3>
+                    <p>R$ 15,00</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="section4" class="localizacao-contato">
+        <h2>CONTATOS</h2>
+        <div class="container-form">
+            <iframe class='map' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d636.1746328427959!2d-37.80879671728095!3d-6.553771819496808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7a51bf927382e37%3A0x8ab96611313f300!2zUHJhw6dhIEZyZWkgRGFtacOjbw!5e0!3m2!1spt-BR!2sbr!4v1788467475846!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+
+            <form>
+                <h3>ENTRAR EM CONTATO</h3>
+                <div class="input-form">
+                    <span><ion-icon name="person-outline"></ion-icon></span>
+                    <input type="text" placeholder="Nome">
+                </div>
+
+                <div class="input-form">
+                    <span><ion-icon name="paper-plane-outline"></ion-icon></span>
+                    <input type="email" placeholder="Email">
+                </div>
+
+                <div class="input-form">
+                    <span><ion-icon name="call-outline"></ion-icon></span>
+                    <input type="number" placeholder="Telefone">
+                </div>
+                <button>ENTRAR EM CONTATO</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-row">
+                <div class="footer-text-about">
+                    <h3>SOBRE NÓS</h3>
+                    <p>A Barbearia Black Red nasceu da paixão pelo estilo, cuidado e tradição da barbearia. Nosso objetivo sempre foi criar um espaço onde cada cliente pudesse não apenas cortar o cabelo ou fazer a barba, mas também aproveitar um ambiente confortável e moderno.
+                    Com um atendimento próximo e personalizado, buscamos entender o estilo e a preferência de cada pessoa para entregar o melhor resultado. Trabalhamos com dedicação em cada detalhe, desde o corte até o acabamento, sempre buscando qualidade e satisfação.
+                    Aqui na Black Red, acreditamos que cuidar da aparência também é uma forma de expressar personalidade. Por isso, unimos técnicas atuais, atenção aos detalhes e um ambiente pensado para que cada cliente tenha uma experiência diferenciada.
+                    Mais do que um corte, queremos que você saia daqui se sentindo bem e confiante.</p>
+                </div>
+                <div class="footer-contact">
+                    <span class="contact-message">Entre em contato:</span>
+                    <span><ion-icon class="whatsapp-contact" name="logo-whatsapp"></ion-icon></span>
+                    <span><ion-icon class="instagram-contact" name="logo-instagram"></ion-icon></span>
+                    <span><ion-icon class="email-contact" name="mail-outline"></ion-icon></span>
+                    <span><ion-icon class="facebook-contact" name="logo-facebook"></ion-icon></span>
+                </div>
+                <div class="footer-nav">
+                    <a href="#section0">Início</a>
+                    <a href="#section1">Sobre nós</a>
+                    <a href="#section2">Nossos Clientes</a>
+                    <a href="#section3">Principais Serviços</a>
+                    <a href="#section4">Entrar Em Contato</a>
+                </div>
+            </div>
+            <div class="footer-row">
+                <div class="footer-copyright">
+                    <span>&copy Barbearia Black & Red. Todos os direitos reservados.</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+     <!-- Scripts dos Ion-icons -->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons/dist/ionicons/ionicons.esm.js"></script>
+     <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons/dist/ionicons/ionicons.js"></script>
+     <script src="/scripts/script.js"></script>
+</body>
+
+</html>

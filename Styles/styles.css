@@ -1,0 +1,513 @@
+@import url('https://fonts.googleapis.com/css2?family=Glass+Antiqua&display=swap');
+
+/* Largura da barra de rolagem inteira */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Fundo da barra de rolagem (trilho) */
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 5px;
+}
+
+/* Parte móvel que é arrastada (alça) */
+::-webkit-scrollbar-thumb {
+  background: #523D3C;
+  border-radius: 5px;
+}
+
+/* Cor da alça ao passar o mouse */
+::-webkit-scrollbar-thumb:hover {
+  background: #332D2C;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html{
+    overscroll-behavior-y: none;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Glass Antiqua', cursive;
+    background-color: #D9D9D9;
+    overflow-x: hidden;
+    position: relative;
+}
+
+
+/* NAVBAR STYLES */
+.navbar{
+    display: flex;
+    background-color: #1A1B1E;
+}
+
+.navbar-menu{
+    display: flex;
+    margin:auto;
+    width: 50%;
+    color: #D9D9D9;
+    padding: 30px;
+    justify-content: space-between;
+    font-size: 20px
+}
+
+.navbar-menu li{
+    list-style-type:none;
+}
+
+.navbar-menu li a{
+    text-decoration:none;
+    color:#D9D9D9;
+    position:relative;
+    padding-bottom: 4px;
+}
+
+.navbar-menu li a::after{
+    content:'';
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:0;
+    height:2px;
+    background-color: #D9D9D9;
+    transition: width 0.12s ease;;
+}
+
+.navbar-menu li a:hover::after{
+    width:100%;
+}
+
+
+
+
+/* Section Styles */
+
+/* BANNER SYTLES */ 
+.banner{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:linear-gradient(to bottom, transparent 96% ,#D9D9D9), url('/media/icons/Barbearia_Logo.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* SOBRE NÓS STYLES */
+.sobre{
+    position: relative;
+    display:flex;
+    padding: 0 5%;
+    margin-top:80px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sobre-text{
+    width: 30%;
+    margin-left: 10%;
+    text-align: justify;
+    font-size: 25px;
+    color: #523D3C;
+
+}
+.sobre-text h2{
+    font-size:45px;
+    padding: 20px 0;
+}
+
+.sobre-image{
+    border-radius: 30px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    margin-right:10%;
+    padding: 35px;
+    padding-bottom:0px;
+    background-color: #b8453d;
+}
+.sobre-image img{
+    max-width: 100%;
+    border-radius:30px
+}
+
+
+/* CARDS DE APRESENTAÇÃO DOS CLIENTES E RESULTADOS */
+
+.cards-customers{
+    display: flex;
+    background-color:#b8453d;
+    padding: 50px 20px;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.cards-customers h2{
+    width: 100%;
+    color: #D9D9D9;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 35px;
+    letter-spacing: 3px;
+}
+
+.card{
+    background-color:  #fcfbf9;
+    width: 280px;
+    padding: 15px 15px 35px 15px;
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+
+    transform: rotate(-1deg);
+    transition: transform 0.2s ease;
+}
+.card:hover{
+    transform: scale(1.03) rotate(1deg);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+
+.card-image{
+    margin-bottom: 15px;
+    border: 1px solid #e2e2e2
+}
+
+.card-image img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+
+
+/* PRINCIPAIS SERVIÇOS */
+.servicos {
+    display: flex;
+    flex-direction: column; 
+    padding: 50px 20px;
+    align-items: center;
+    position: relative;
+    background-color: #D9D9D9;
+}
+
+.servicos span {
+    width: 100%;
+    color: #332D2C;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 40px;
+    letter-spacing: 3px;
+    text-decoration: underline;
+}
+
+/* CONTAINER DO CARROSSEL DE SERVIÇOS ALTERADO para 1210px (mais espaço na tela) */
+.servicos-container {
+    max-width: 1210px; 
+    overflow: hidden; 
+    width: 100%;
+    padding: 20px 0;
+    margin: auto;
+}
+
+.servicos-wrapper {
+    display: flex;
+    gap: 35px; /* Aumentado ligeiramente para acompanhar o espaço maior */
+    padding: 10px;
+    transition: transform 0.4s ease-in-out;
+}
+
+/* CARDS DE SERVIÇO INDIVIDUAIS ALTERADOS para 380px (cards maiores e mais imponentes) */
+.card-servico {
+    background-color: #1A1B1E; 
+    color: #D9D9D9;
+    width: 380px; 
+    flex-shrink: 0; 
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding-bottom: 20px;
+    transition: transform 0.2s ease;
+}
+
+.card-servico:hover{
+    transform: scale(1.05);
+}
+
+.card-servico:hover .servico-imagem img{
+    transform: translateY(-25px); /* Sobe um pouco mais ja que o card cresceu */
+    filter: none;
+    opacity: 0.5; /* Opacidade reduzida ajuda a destacar o h5 borrado atrás */
+}
+
+.card-servico:hover h5{
+    opacity: 1;
+    visibility: visible;
+}
+
+/* NOVO: Container da imagem definido como relativo para guiar a física do h5 */
+.servico-imagem {
+    width: 100%;
+    height: 240px; /* Aumentado proporcionalmente ao tamanho do card */
+}
+
+.servico-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
+}
+
+.card-servico h3 {
+    font-size: 28px; /* Texto maior */
+    margin: 20px 0 5px 0;
+}
+
+/* MODIFICADO: h5 agora flutua perfeitamente no espaço vazio deixado pela imagem */
+.card-servico h5{
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    font-size: 18px;
+    color: #D9D9D9;
+}
+
+.card-servico p {
+    font-size: 28px; /* Preço maior */
+    color: #b8453d; 
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* SETAS DO CARROSSEL DE SERVIÇOS */
+.btn-servico {
+    position: absolute;
+    top: 60%;
+    transform: translateY(-50%);
+    background-color: #1A1B1E;
+    color: #D9D9D9;
+    border: none;
+    font-size: 25px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: background 0.2s;
+}
+
+.btn-servico:hover {
+    background-color: #b8453d;
+}
+.btn-servico-prev { left: 2%; } /* Ajustado mais para a ponta da tela */
+.btn-servico-next { right: 2%; } /* Ajustado mais para a ponta da tela */
+
+
+/*Localização e formularop de contato */
+.localizacao-contato{
+    padding: 0 10rem 0 10rem;
+    background-color: #332D2C;
+}
+
+.localizacao-contato h2{
+    align-items: center;
+    text-align: center;
+    color: #D9D9D9;
+    font-size: 40px;
+    margin-top: 10px;
+    padding-top: 30px;
+}
+
+.container-form{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    box-shadow: 4px 4px 8px rgba(0,0,0,0.3);
+    padding-bottom: 30px;
+}
+
+form{
+    background-color: #D9D9D9;
+    padding: 2rem;
+    width: 50rem;
+    height: auto;
+}
+
+form h3{
+    text-align: center;
+    color: #b8453d;
+    font-size: 2rem;
+}
+
+.localizacao-contato .container-form .map{
+    width: 100%;
+    flex: 1.45rem;
+    object-fit: cover;
+}
+
+.input-form{
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 1rem;
+    margin-top: 1rem;
+    background-color: white;
+}
+
+.input-form input{
+    border: none;
+    width: 100%;
+    padding: 1.5rem;
+    outline: none;
+}
+
+.input-form span{
+    color:#b8453d;
+    font-size: 20px;
+}
+
+form button{
+    margin-top: 2rem;
+    background-color: #b8453d;
+    padding: 10px 15px;
+    cursor: pointer;
+    text-align: center;
+    align-items: center;
+    color: #D9D9D9;
+    border: none;
+}
+
+form button:hover{
+    background-color: #7b3330;
+    border-radius: 10px;
+    transition: 0.3s all;
+}
+
+
+/* FOOTER / RODAPÉ */
+footer{
+    background-color: #1A1B1E;
+    padding: 40px 0 20px 0; /* Substitui as margens rígidas por espaçamento interno seguro */
+}
+
+.footer-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto; /* Centraliza o bloco na tela */
+    padding: 0 20px;
+    position: relative;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-text-about{
+    width: 45%;
+    color: #D9D9D9;
+}
+
+.footer-contact{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 45%;
+    font-size: 2.5rem;
+    justify-content: flex-start;
+}
+
+.contact-message{
+    font-size: 30px;
+    width: 100%;
+    color: #D9D9D9;
+    margin-bottom: 10px;
+}
+
+.footer-contact ion-icon{
+    background-color: #1A1B1E;
+    padding: 5px;
+    margin: 10px 20px 10px 0;
+    border-radius: 40px;
+    color: #D9D9D9;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-contact:hover{
+    background-color: #25d366 ;
+    transform: scale(1.2);
+    box-shadow: 0 0 10px #D9D9D9;
+}
+
+.instagram-contact:hover{
+    background: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);
+    transform: scale(1.2);
+    box-shadow: 0 0 10px #D9D9D9;
+}
+
+.email-contact:hover{
+    color: #ea4335; 
+    background-color: #f1f3f4;
+    transform: scale(1.2);
+    box-shadow: 0 0 10px #D9D9D9;
+}
+
+.facebook-contact:hover{
+    background-color: #1877F2 ;
+    transform: scale(1.2);
+    box-shadow: 0 0 10px #D9D9D9;
+}
+
+.footer-nav{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px 0;
+}
+
+.footer-nav a{
+    color: #D9D9D9;
+    text-decoration: none;
+    padding-bottom: 4px;
+    position: relative;
+}
+
+.footer-nav a::after{
+    content:'';
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:0;
+    height:2px;
+    background-color: #D9D9D9;
+    transition: width 0.12s ease;
+}
+
+.footer-nav a:hover::after{
+    width:100%;
+}
+
+.footer-copyright{
+    width: 100%;
+    text-align: center;
+    color: #D9D9D9;
+    font-size: larger;
+    margin-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+}
